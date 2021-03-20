@@ -1,27 +1,72 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  color: #1b4332; }
 
 body {
-  background: #e76f51;
+  background: #d8f3dc;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1.2rem;
   line-height: 1.4; }
 
 .container {
-  background: #f4a261;
-  width: 20rem;
-  margin: auto;
+  background: #d8f3dc;
+  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  padding: 1.5rem 0;
-  border: solid #264653 2px;
-  box-shadow: black;
-  border-radius: 4px; }
+  justify-content: center; }
+  .container .list-content {
+    background-color: #95d5b2;
+    padding: 1.5rem 0.75rem;
+    border: solid #1b4332 2px;
+    box-shadow: black;
+    border-radius: 4px;
+    margin: auto;
+    width: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column; }
+    .container .list-content ul li {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      width: 80%; }
+  .container form {
+    margin-top: 1.2rem; }
+    .container form input {
+      padding: 0.25rem;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      border-radius: 3px; }
+  .container .submit {
+    background: #40916c;
+    color: #d8f3dc;
+    padding: 0.25rem;
+    font-size: 1.2rem;
+    border-radius: 3px;
+    cursor: pointer; }
+  .container .submit:hover {
+    background-color: #d8f3dc;
+    color: #40916c; }
+  .container #clear {
+    background-color: #d8f3dc;
+    color: #1b4332;
+    padding: 0.4rem;
+    font-size: 1.4rem;
+    border-radius: 3px;
+    box-shadow: #40916c;
+    cursor: pointer; }
+    .container #clear:hover {
+      opacity: 0.8; }
   .container #groceryItem {
-    background-color: #e9c46a;
-    color: #264653; }
+    background-color: #b7e4c7;
+    color: #1b4332; }
+
+.invisible {
+  visibility: hidden; }
+
+.visible {
+  visibility: visible; }

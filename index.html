@@ -5,22 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yathaartha| Daily Grocery</title>
+    <script
+      src="https://kit.fontawesome.com/538af86eaa.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css/main.css" />
     <script src="assets/app.js" defer></script>
   </head>
   <body>
     <div class="container">
-      <h1>List Grocery Items</h1>
-      <form action="">
-        <input
-          type="text"
-          placeholder="cereals"
-          id="groceryItem"
-          name="groceryItem"
-        />
-        <input type="submit" value="Submit" />
-      </form>
-      <button id="clear">Clear</button>
+      <div class="list-content">
+        <h1>List Grocery Items</h1>
+        <form action="">
+          <input
+            type="text"
+            placeholder="cereals"
+            id="groceryItem"
+            name="groceryItem"
+          />
+        </form>
+        <button class="submit" id="submitBtn">Submit</button>
+        <div id="list" class="visible">
+          <ul>
+            <li>
+              <span>Eggs</span><button><i class="far fa-edit"></i></button>
+              <button><i class="far fa-trash-alt"></i></button>
+            </li>
+          </ul>
+        </div>
+        <button id="clear" class="invisible">Clear</button>
+      </div>
     </div>
   </body>
 </html>
