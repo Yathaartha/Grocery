@@ -1,5 +1,6 @@
 const inputItem = document.getElementById("groceryItem");
 const submitBtn = document.getElementById("submitBtn");
+const clearBtn = document.getElementById("clear");
 groceryList = [];
 
 class GroceryItem {
@@ -18,12 +19,44 @@ class GroceryItem {
   }
 
   renderList() {
-    this.listItems.innerHTML = `
+    const listItem = document.createElement("li");
+    listItem.innerHTML = `
     <li>
-      <span>${this.listItem}</span><button><i class="far fa-edit"></i></button>
-      <button><i class="far fa-trash-alt"></i></button>
+      <span>${this.listItem}</span><button class= "edit"><i class="far fa-edit"></i></button>
+      <button class = "delete"><i class="far fa-trash-alt"></i></button>
     </li>
     `;
+    this.listItems.append(listItem);
+    this.listItems.style.visibility = "visible";
+    this.checkLength();
+    const editBtn = listItem.querySelector(".edit");
+    const deleteBtn = listItem.querySelector(".delete");
+    editBtn.addEventListener("click", this.editHandler);
+    deleteBtn.addEventListener("click", this.deleteHandler);
+    clearBtn.addEventListener("click", this.clearHandler.bind(this));
+  }
+
+  checkLength() {
+    if (groceryList.length > 0) {
+      clearBtn.className = "visible";
+    } else {
+      clearBtn.className = "invisible";
+    }
+  }
+
+  editHandler() {
+    console.log(this.listItem);
+  }
+
+  deleteHandler() {
+    console.log(this.listItem);
+  }
+
+  clearHandler() {
+    this.listItems.style.visibility = "hidden";
+    this.listItems.textContent = "";
+    groceryList = [];
+    this.checkLength();
   }
 }
 

@@ -31,9 +31,11 @@ body {
     flex-direction: column; }
     .container .list-content ul li {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       list-style: none;
-      width: 80%; }
+      width: 250px;
+      margin: 0.5rem auto;
+      font-size: 1.3rem; }
   .container form {
     margin-top: 1.2rem; }
     .container form input {
