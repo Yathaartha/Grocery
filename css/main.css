@@ -43,14 +43,16 @@ body {
       margin-bottom: 1rem;
       font-size: 1.2rem;
       border-radius: 3px; }
-  .container .submit {
+  .container .submit,
+  .container .save {
     background: #40916c;
     color: #d8f3dc;
     padding: 0.25rem;
     font-size: 1.2rem;
     border-radius: 3px;
     cursor: pointer; }
-  .container .submit:hover {
+  .container .submit:hover,
+  .container .save-hover {
     background-color: #d8f3dc;
     color: #40916c; }
   .container #clear {
