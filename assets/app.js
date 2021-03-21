@@ -100,8 +100,10 @@ function render(groceryList) {
   for (const grcyItem in groceryList) {
     listItem.innerHTML = `
       <li id="${grcyItem}">
-        <span>${groceryList[grcyItem]}</span><button class= "edit"><i class="far fa-edit"></i></button>
-        <button class = "delete"><i class="far fa-trash-alt"></i></button>
+      <div>
+        <span>${groceryList[grcyItem]}</span><span class="buttons"><button class= "edit"><i class="far fa-edit fa-2x"></i></button>
+        <button class = "delete"><i class="far fa-trash-alt fa-2x"></i></button><span>
+      </div>
       </li>
       `;
     listItems.append(listItem);
@@ -117,17 +119,18 @@ function idTracker(id) {
   deleteBtn.addEventListener("click", () => {
     groceryList.splice(id, 1);
     currentItem.remove();
-    render();
+    // render(groceryList);
+    checkLength();
   });
   editBtn.addEventListener("click", () => {
     editFlag = true;
-    submitBtn.style.visibility = "hidden";
-    saveBtn.style.visibility = "visible";
+    submitBtn.style.display = "none";
+    saveBtn.style.display = "initial";
     saveBtn.addEventListener("click", () => {
       const editItem = currentItem.querySelector("span");
       editItem.textContent = `${inputItem.value}`;
-      submitBtn.style.visibility = "visible";
-      saveBtn.style.visibility = "hidden";
+      submitBtn.style.display = "initial";
+      saveBtn.style.display = "none";
     });
   });
 }

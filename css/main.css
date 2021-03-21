@@ -30,12 +30,31 @@ body {
     text-align: center;
     flex-direction: column; }
     .container .list-content ul li {
-      display: flex;
-      justify-content: space-between;
       list-style: none;
       width: 250px;
       margin: 0.5rem auto;
-      font-size: 1.3rem; }
+      font-size: 1.3rem;
+      margin-top: 0.75rem; }
+      .container .list-content ul li div {
+        display: flex;
+        padding-right: 0.75rem;
+        padding-left: 0.75rem;
+        padding-bottom: 0.4rem;
+        justify-content: space-between;
+        border-bottom: dotted #1b4332 1px; }
+        .container .list-content ul li div button {
+          background-color: #b7e4c7;
+          border: none;
+          cursor: pointer; }
+        .container .list-content ul li div button:hover {
+          opacity: 0.8; }
+        .container .list-content ul li div .buttons {
+          margin: 0 0.25rem;
+          background-color: #95d5b2; }
+          .container .list-content ul li div .buttons i {
+            border: none;
+            background-color: #95d5b2;
+            text-decoration: none; }
   .container form {
     margin-top: 1.2rem; }
     .container form input {
@@ -70,7 +89,7 @@ body {
     color: #1b4332; }
 
 .invisible {
-  visibility: hidden; }
+  display: none; }
 
 .visible {
-  visibility: visible; }
+  display: initial; }
